@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>
+            <%=locals.title %>
+        </title>
+    
+    </head>
+        <!-- we are using font awesome here  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- connecting to my css file now -->
+
+    <link rel="stylesheet" href="/css/home.css">
+
+    <body>
+        <div id="outerdiv">
+            <div id="innerdiv"> 
+                <h1 id="heading1"> 
+                    <i class="fa fa-pencil-square"></i>
+                    TodoApp
+                </h1>
+                <form action="/dashboard/create-Task" method="POST">
+
+                    <input id="description" type="text" name="description" placeholder="Description: What do u need to do ?" required>
+                    <br>
+                     <form>
+                        <select id="category" name="category" placeholder="category" required>
+                            <option id="option1">
+                                personal
+                            </option>
+                            <option id="option2" >work</option>
+                            <option id="option3"> school</option>
+                            <option id="option4"> programming</option>
+                     </form>
+                    
+                    <input id="date" type="date" name="date" placeholder="Due-Date" required>
+                    <br>
+                    <br>
+
+                    <button id="button"type="submit">
+                        <i class="fa fa-plus" aria-hidden="true">
+                            Add-Task
+                        </i>
+                    </button>
+                    
+                    
+                    
+                </form> 
+                
+                
+                </button>
+                 
+                <form action="/dashboard/delete-task/" method="GET">
+                    
+                    <button id="DB" type="submit"  >
+                        <i class="fa fa-trash" aria-hidden="true">
+                             
+                            Delete-Task
+                        </i> 
+                        
+                    </button>   
+                    
+
+                <% for ( let i of todo_list ) { %> 
+
+                    <div id="div1">
+
+                        <div id="des-div"> 
+                            
+                        <div id="checkbox">
+                            
+                                <input type="checkbox" name="<%=i._id%>" >
+                                
+                            
+                        </div>
+                            
+                            <%= i.description %>
+
+                            <div id="cte-div">
+
+                                <%= i.category %> 
+
+                            </div> 
+
+                            <div id="due-date">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                 due date <%= i.date%>
+                            </div>
+                           
+                            
+
+                                </a>
+                            </div>  
+                         
+                    </div>
+
+                        
+                    
+                    
+                    
+                    <% } %>
+
+
+                    
+                </form>
+                    
+                    
+                    
+            </div>
+        </div>
+        <a href="/users/logout" class="btn btn-secondary">Logout</a>
+    </body>
+</html>

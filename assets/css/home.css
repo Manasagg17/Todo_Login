@@ -1,0 +1,84 @@
+#heading1 {
+  text-align: center;
+  color: slategray;
+  text-decoration: underline;
+}
+#button {
+  color: whitesmoke;
+  font-weight: bolder;
+  background-color: slategray;
+  width: 100%;
+  height: 10%;
+  display: inline-block;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#heading1 {
+  font-weight: bolder;
+  font-style: oblique;
+}
+#outerdiv {
+  background-color: lightgray;
+  border: 5px solid black;
+  align-self: center;
+  width: 50%;
+  height: 50%;
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+#innerdiv {
+  position: sticky;
+  text-overflow: clip;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  align-self: center;
+  width: 50%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+}
+#description {
+  width: 100%;
+  height: 15%;
+}
+#des-div {
+  width: 100%;
+  border: 1px solid lightgrey;
+}
+#cte-div {
+  font-style: oblique;
+  text-decoration: bold;
+  color: white;
+  padding: 0.5%;
+  background-color: purple;
+  text-align: center;
+  border: 2px solid white;
+  width: 25%;
+  height: 5%;
+  display: inline-flex;
+}
+#category {
+  width: 50%;
+  height: 8%;
+}
+#date {
+  width: 50%;
+  height: 8%;
+}
+#due-date {
+  color: gray;
+}
+#DB {
+  color: white;
+
+  background-color: red;
+  width: 100%;
+  height: 10%;
+  display: inline-block;
+}
+#checkbox {
+  display: inline-block;
+}
